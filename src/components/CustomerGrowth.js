@@ -14,7 +14,7 @@ const CustomerGrowth = () => {
     ];
 
     return (
-        <Card>
+        <Card sx={{ marginBottom: '50px' }}>
             <CardContent>
                 <Typography variant="h6" gutterBottom>
                     Customer Growth

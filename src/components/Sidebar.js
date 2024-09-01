@@ -40,7 +40,7 @@ const Sidebar = () => {
                     variant="h6"
                     noWrap
                     display="flex"
-                    alignItems="center" // This will align the image and text in the center
+                    alignItems="center"
                 >
                     <Image
                         src={'/images/Logo.png'}
@@ -86,69 +86,13 @@ const Sidebar = () => {
                                 <ListItemText primary="Orders" />
                             </ListItem>
                         </Link>
+                        <Link href="/admin/category" passHref style={{ textDecoration: 'none', color: 'black' }}>
+                            <ListItem button sx={{ pl: 4, textDecoration: 'none', color: 'black' }}>
+                                <ListItemText primary="Category" />
+                            </ListItem>
+                        </Link>
                     </List>
                 </Collapse>
-
-                {/* Project */}
-                <Link href="/project" passHref style={{ textDecoration: 'none', color: 'black' }}>
-                    <ListItem button >
-                        <ListItemIcon>
-                            <WorkIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Project" />
-                    </ListItem>
-                </Link>
-
-                {/* Contact */}
-                <ListItem button onClick={handleContactClick}>
-                    <ListItemIcon>
-                        <ContactMailIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="Contact" />
-                    {openContact ? <ExpandLess /> : <ExpandMore />}
-                </ListItem>
-                <Collapse in={openContact} timeout="auto" unmountOnExit>
-                    <Link href="/contact/clients" passHref style={{ textDecoration: 'none', color: 'black' }}>
-                        <ListItem button sx={{ pl: 4, textDecoration: 'none', color: 'black' }}>
-                            <ListItemText primary="Clients" />
-                        </ListItem>
-                    </Link>
-                    <Link href="/contact/suppliers" passHref style={{ textDecoration: 'none', color: 'black' }}>
-                        <ListItem button sx={{ pl: 4, textDecoration: 'none', color: 'black' }}>
-                            <ListItemText primary="Suppliers" />
-                        </ListItem>
-                    </Link>
-                </Collapse>
-
-                {/* File Manager */}
-                <Link href="/file-manager" passHref style={{ textDecoration: 'none', color: 'black' }}>
-                    <ListItem button >
-                        <ListItemIcon>
-                            <FolderIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="File Manager" />
-                    </ListItem>
-                </Link>
-
-                {/* Chat */}
-                <Link href="/chat" passHref style={{ textDecoration: 'none', color: 'black' }}>
-                    <ListItem button >
-                        <ListItemIcon>
-                            <ChatIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Chat" />
-                    </ListItem>
-                </Link>
-
-                {/* Calendar */}
-                <Link href="/calendar" passHref style={{ textDecoration: 'none', color: 'black' }}>
-                    <ListItem button >
-                        <ListItemIcon>
-                            <CalendarTodayIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Calendar" />
-                    </ListItem>
-                </Link>
             </List>
         </Drawer>
     );
