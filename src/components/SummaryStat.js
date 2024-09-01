@@ -18,7 +18,7 @@ const StatCard = ({ title, value, progress, imgPath }) => (
 );
 
 const SummaryStats = () => (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} ml={0.5}>
         <Grid item xs={12} sm={3}>
             <StatCard title="Total Project" value="6,784" progress="+$150 today" imgPath="/images/TotalProject.png" />
         </Grid>

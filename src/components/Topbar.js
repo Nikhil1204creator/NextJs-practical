@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, IconButton, Box, Stack } from '@mui/material';
+import { Toolbar, Typography, IconButton, Box, Stack } from '@mui/material';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 const Topbar = () => (

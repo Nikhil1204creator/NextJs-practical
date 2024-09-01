@@ -37,6 +37,8 @@ const topCategories = [
     { name: "Mouse", sales: 791, change: "-25%", color: "blue" },
     { name: "Hardisk & USB Drive", sales: 679, change: "-11%", color: "yellow" },
     { name: "Camera", sales: 679, change: "+11%", color: "gray" },
+    { name: "Tablet", sales: 1460, change: "-5%", color: "orange" },
+    { name: "Mouse", sales: 791, change: "-25%", color: "blue" },
 ];
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -58,7 +60,7 @@ export default function Dashboard() {
             <main>
                 <Topbar />
                 <SummaryStats />
-                <Box mt={2} sx={{ width: '100%' }}>
+                <Box mt={2} ml={3} sx={{ width: '100%' }}>
                     <Grid container spacing={3} >
 
                         {/* Target Gauge Card */}
@@ -75,7 +77,11 @@ export default function Dashboard() {
                                             Statistic
                                         </Typography>
                                     }
-                                    subheader="Revenue and Sales"
+                                    subheader={
+                                        <Typography variant="subtitle2" color="text.secondary">
+                                            Revenue and Sales
+                                        </Typography>
+                                    }
                                 />
                                 <CardContent>
                                     <StatisticChart />
@@ -86,7 +92,7 @@ export default function Dashboard() {
                     </Grid>
                 </Box>
 
-                <Box mt={2}>
+                <Box mt={2} ml={3}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} md={6} lg={4} display="flex">
                             <SalesSourceChart />
@@ -138,7 +144,7 @@ export default function Dashboard() {
                     </Grid>
                 </Box>
 
-                <Box mt={2} mb={5}>
+                <Box mt={2} ml={3}>
                     <Grid container spacing={3}>
                         <Grid item xs={12} md={7} style={{ display: 'flex' }}>
                             <RecentOrders style={{ flex: 1 }} />
