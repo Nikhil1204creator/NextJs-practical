@@ -13,10 +13,10 @@ const RecentOrders = () => {
 
     return (
         <Box style={{ flex: 1 }}>
-            <Card>
+            <Card sx={{ width: '100%', height: '98%' }}>
                 <CardContent>
                     <Box display="flex" justifyContent="space-between" alignItems="center">
-                        <Typography variant="h6">Recent Orders</Typography>
+                        <Typography variant="h6" fontWeight={600}>Recent Orders</Typography>
                         <Button variant="contained" color="primary">+2 Orders</Button>
                     </Box>
                     <TableContainer>

@@ -145,7 +145,7 @@ export default function Dashboard() {
                 </Box>
 
                 <Box mt={2} ml={3}>
-                    <Grid container spacing={3}>
+                    <Grid container spacing={7}>
                         <Grid item xs={12} md={7} style={{ display: 'flex' }}>
                             <RecentOrders style={{ flex: 1 }} />
                         </Grid>

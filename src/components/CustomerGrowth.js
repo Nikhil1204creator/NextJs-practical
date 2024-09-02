@@ -14,9 +14,9 @@ const CustomerGrowth = () => {
     ];
 
     return (
-        <Card sx={{ marginBottom: '50px' }}>
+        <Card sx={{ marginBottom: '50px', width: '100%', height: '98%' }}>
             <CardContent>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" fontWeight={600} gutterBottom>
                     Customer Growth
                 </Typography>
                 <Box display="flex" justifyContent="center" alignItems="center" mb={2}>

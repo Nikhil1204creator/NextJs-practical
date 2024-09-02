@@ -5,13 +5,10 @@ import Link from 'next/link'; // Import Next.js Link
 import { useState } from 'react';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import WorkIcon from '@mui/icons-material/Work';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import FolderIcon from '@mui/icons-material/Folder';
-import ChatIcon from '@mui/icons-material/Chat';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import CategoryIcon from '@mui/icons-material/Category';
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import Image from 'next/image';
 
 const Sidebar = () => {
@@ -71,23 +68,26 @@ const Sidebar = () => {
                             <ShoppingCartIcon />
                         </Badge>
                     </ListItemIcon>
-                    <ListItemText primary="E-Commerce" />
+                    <ListItemText primary="E-Commerce" sx={{ cursor: 'pointer' }} />
                     {openEcommerce ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
                 <Collapse in={openEcommerce} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>
                         <Link href="/admin/ecommerce/products" passHref style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItem button sx={{ pl: 4, textDecoration: 'none', color: 'black' }}>
+                                <ProductionQuantityLimitsIcon sx={{ color: '#757575' }} />
                                 <ListItemText primary="Products" />
                             </ListItem>
                         </Link>
                         <Link href="/admin/orders" passHref style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItem button sx={{ pl: 4, textDecoration: 'none', color: 'black' }}>
+                                <ShoppingCartIcon sx={{ color: '#757575' }} />
                                 <ListItemText primary="Orders" />
                             </ListItem>
                         </Link>
                         <Link href="/admin/category" passHref style={{ textDecoration: 'none', color: 'black' }}>
                             <ListItem button sx={{ pl: 4, textDecoration: 'none', color: 'black' }}>
+                                <CategoryIcon sx={{ color: '#757575' }} />
                                 <ListItemText primary="Category" />
                             </ListItem>
                         </Link>
